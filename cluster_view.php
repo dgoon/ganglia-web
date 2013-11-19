@@ -748,6 +748,10 @@ if (isset($conf['show_stacked_graphs']) and
   $stacked_args = "m={$user['metricname']}&amp;c=$cluster_url&amp;r=$range&amp;st=$cluster[LOCALTIME]";
   if (isset($user['host_regex']))
     $stacked_args .= "&amp;host_regex=" . $user['host_regex'];
+  if (isset($conf['show_stacked_graphs_legend']) and
+    $conf['show_stacked_graphs_legend'] == 0) {
+    $stacked_args .= "&amp;nolegend=1";
+  }
   $data->assign("stacked_graph_args", $stacked_args);
 }
 

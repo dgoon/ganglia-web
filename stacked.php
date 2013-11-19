@@ -40,6 +40,10 @@ if (isset($_GET['vl'])) {
         $command .= " --vertical-label " . escapeshellarg($_GET['vl']);
 }
 
+if (isset($_GET['nolegend'])) {
+            $command .= " -g";
+}
+
 $total_cmd = " CDEF:'total'=0";
 
 # We'll get the list of hosts from here

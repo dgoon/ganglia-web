@@ -383,6 +383,9 @@ $conf['decorated_graph_title'] = true;
 # If set to yes, will display stacked graph (aggregated metric across hosts) in cluster view
 $conf['show_stacked_graphs'] = 1;
 
+# If set to no, stacked graph will not have legends. If you have TOO many hosts consider to hide them.
+$conf['show_stacked_graphs_legend'] = 1;
+
 # If set to false the grid view under the main tab will be displayed only if 
 # the grid name is not "unspecified", or a parent grid has been defined.
 # If set to true the grid view will always be displayed even when only a
